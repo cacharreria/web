@@ -1,0 +1,10 @@
+﻿body {
+    color: red;
+    /* Color del texto rojo */
+    border: solid 3px;
+}
+
+p {
+    border: inherit;
+    /* Heredar el borde de la etiqueta body */
+}

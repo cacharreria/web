@@ -1,0 +1,60 @@
+<!---las pseudoclases de CSS son  en funcion del estado de un elemento--->
+<!doctype html>
+<html>
+  <head>
+    <title>CSS - Las pseudoclases</title>
+    <meta charset="utf-8" />
+    <style>
+      p:first-child {
+        /* Uso de la pseudoclase first-child */
+        color: red;
+      }
+      p:first-letter {
+        /* Uso de la pseudoclase first-letter 
+    pone la primera letra del pararfo mas grande */
+        font-size: 200%;
+      }
+      p:first-line {
+        /* Uso de la pseudoclase first-line */
+        font-weight: bold;
+      }
+      a:link {
+        /* Uso de la pseudoclase link */
+        color: blue;
+      }
+      a:visited {
+        /* Uso de la pseudoclase visited */
+        color: green;
+      }
+      a:active {
+        /* Uso de la pseudoclase active */
+        color: red;
+      }
+      a:focus {
+        /* Uso de la pseudoclase focus */
+        color: yellow;
+      }
+      h1:before {
+        content: "Antes de ";
+      }
+      h2:after {
+        content: " Despues de";
+      }
+    </style>
+  </head>
+  <body>
+    <p>Esto es un primer pararfo con la pseudoclase first-child en rojo</p>
+    <h1>Este es un titulo de primer nivel, par aver el before</h1>
+    <p>
+      Esto es el segundo parrafo y le vamos a dar mas longitud para poder ver el
+      first-line que actua unicamente sobre la primera linea de cada elemento.
+      Me va a tocar escribir mucho para que se vea el efecto. Tengo que escribir
+      mucho para que se vea el efecto. Tengo que escribir mucho para que se vea
+      el efecto. Tengo que escribir mucho para que se vea el efecto. Tengo que
+      escribir mucho para que se vea el efecto. Tengo que escribir mucho para
+      que...
+    </p>
+    <p>LA primera letra es mas grande que las demas</p>
+    <a href="http://www.google.com">Enlace a Google</a>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+h1 {
+  text-decoration: overline;
+}
+/*Comnetario de prueba
+ *
+ * */
+/*Selectores de etiqueta*/
+div {
+  background-color: #f0f0f0;
+}
+h1,
+h2,
+h3 {
+  color: #cc0000;
+  background-color: #000000;
+}
+/*Selectores de clase, despues en la pagina html habra que llamarlo en es parrafo <p class="rojo">  */
+p.rojo {
+  color: red;
+}
+/*--- Clases universales,
+que valen para cualquier etiqueta */
+*.grande {
+  font-size: 50px;
+}

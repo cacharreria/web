@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <title>CSS Clases</title>
+    <meta charset="utf-8" />
+    <style>
+      span.rojo {
+        color: red;
+      }
+      .tipoletra {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .negrita {
+        font-weight: bold;
+      }
+      .cursiva {
+        font-style: italic;
+      }
+      p.centrado {
+        textt-align: center;
+      }
+      .negracursi {
+        font-weight: bold;
+        font-style: italic;
+      }
+      #parrafo1 {
+        color: blue;
+        font-size: 1.5em;
+      }
+      #titulo1 {
+        color: yellow;
+        font-family: Arial, Helvetical, san-serif;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body class="tipoletra">
+    <h1 class="cursiva">Ejemplo de clases heredadas y universales</h1>
+    <h2 id="titulo1">Ejemplo de clases heredadas y universales</h2>
+    <p class="centrado">
+      Quien pronto se acuesta pronto se
+      <span class="cursiva">levanta. </span> El
+      <span class="negrita"> <span class="rojo">estado rojo</span></span> es un
+      estado
+      <span class="negrita">perfecto.</span>
+    </p>
+    <p class="negracursi">Texto en negrita y cursiva.</p>
+    <p id="parrafo1">
+      Este es un parrafo con identificador #parrafo1, que se puede escribir asi
+      o p#parrafo1 y se le llama desde la etiquta con id="parrafo1"
+    </p>
+  </body>
+</html>
+<!---2025-01-14--->
+<!--- se deberia escribir asi p#parrafo1 {color: blue;} pero se omite p --->
