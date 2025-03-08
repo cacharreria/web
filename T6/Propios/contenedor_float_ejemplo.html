@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Estructura y layout - float</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        a:link {
+            color: #069;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        #contendor {
+            width: 100%;
+            margin: 0px;
+            padding: 0;
+            min-width: 500px;
+            overflow: auto;
+        }
+
+        #menu {
+            float: left;
+            width: 18%;
+            margin: 1%;
+            background-color: #ddd;
+        }
+
+        #contenido {
+            float: right;
+            width: 77%;
+            margin: 1%;
+            overflow: hidden;
+            text-align: justify;
+        }
+
+        #pie {
+            font-size: 80%;
+            color: #aaa;
+            background-color: #eee;
+            height: 100px;
+            overflow: auto;
+            border-top: 1px solid #000;
+            padding-top: 5px;
+            text-align: center;
+            clear: both;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0px;
+            padding-left: 5px;
+        }
+
+        #enlaces li {
+            display: inline;
+        }
+
+        #enlaces a {
+            text-align: center;
+            margin: 1px;
+            padding: 5px;
+            width: 80px;
+            font-weight: bold;
+            background-color: #eee;
+            border-top-right-radius: 8px;
+        }
+
+        #enlaces a:hover {
+            color: white;
+            font-weight: bold;
+            background-color: #069;
+            text-decoration: underline;
+            border-top-right-radius: 8px;
+        }
+
+        #opciones li {
+            border-top: 1px solid #ccc;
+            font-size: 90%;
+            margin-bottom: 5px;
+        }
+
+        #barra li {
+            border-left: 5px solid rgb(192, 192, 192);
+            font-size: 80%;
+            padding-left: 15px;
+            padding-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="cabecera">
+        <h1>Lorem ipsum dolor sit amet</h1>
+    </div>
+    <div id="enlaces">
+        <ul>
+            <li><a href="#">Opción 1</a></li>
+            <li><a href="#">Opción 2</a></li>
+            <li><a href="#">Opción 3</a></li>
+            <li><a href="#">Opción 4</a></li>
+        </ul>
+    </div>
+    <hr />
+    <div id="contendor">
+        <div id="menu">
+            <div id="opciones">
+                <p>Opciones</p>
+                <ul>
+                    <li><a href="#">Opción 1</a></li>
+                    <li><a href="#">Opción 2</a></li>
+                    <li><a href="#">Opción 3</a></li>
+                    <li><a href="#">Opción 4</a></li>
+                </ul>
+            </div>
+            <br /> <br /> <br />
+            <div id="barra">
+                <p>Enlaces de interés</p>
+                <ul>
+                    <li><a href="#">Página 1</a></li>
+                    <li><a href="#">Página 2</a></li>
+                    <li><a href="#">Página 3</a></li>
+                    <li><a href="#">Página 4</a></li>
+                </ul>
+            </div>
+            <br />
+        </div>
+        <div id="contenido">
+            <h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
+            <p>
+                Maecenas non tortor. Vestibulum ante ipsum primis in faucibus orci
+                luctus et ultrices posuere cubilia Curae; Sed fermentum lorem a velit.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin sodales,
+                enim in volutpat vehicula, leo turpis vehicula magna, ut rutrum arcu lorem
+                ac pede.
+            </p>
+            <p>
+                Curabitur rutrum eros a risus. Cum sociis natoque penatibus et magnis dis
+                parturient montes, nascetur ridiculus mus. In molestie suscipit libero.
+                Cras sem. Nunc non tellus et urna mattis tempor. Nulla nec tellus a quam
+                hendrerit venenatis. Suspendisse pellentesque odio et est. Morbi sed nisl
+                sed dui consequat sodales. Donec porta porta ligula. Nam erat massa, blandit
+                in, dapibus sit amet, vestibulum et, augue. Suspendisse ac risus. Duis
+                semper fringilla sem. Praesent augue arcu, scelerisque nec, ornare
+                malesuada, posuere a, neque. Nullam nulla nisi, ultrices quis, adipiscing
+                non, varius ut, dui. Nulla viverra pellentesque sem.
+            </p>
+        </div>
+        <div id="pie">
+            Mi página Web - 2016
+        </div>
+    </div>
+</body>
+
+</html>

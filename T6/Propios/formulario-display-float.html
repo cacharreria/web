@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cuerpo {
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0px;
+            width: 60%;
+        }
+        /* importantitismo ir haciendolo linea por linea */
+        .linea {
+            height: 25px;
+        }
+        .etiqueta {
+            float: left;
+            width: 40%;
+            text-align: right;
+            position: relative;
+        }
+        .controles {
+            float: right;
+            width: 58%;
+            text-align: left;
+        }
+        .final {
+            clear: both;
+        }
+        .boton {
+            text-align: center;
+        }
+        .centrado {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="centrado">DATOS DE PRODUCTOS</h1>
+    </div>
+    <form action="https://portfolio.karlinux.com" method="post" id="form">
+        <div class="cuerpo">
+            <div class="linea">
+                <div class="etiqueta">
+                    <label for="codigo">Id del producto</label>
+                </div>
+                <div class="controles">
+                    <input type="text" name="codigo" id="codigo" size="10">
+                </div>
+            </div>
+            <div class="linea">
+                <div class="etiqueta">
+                    <label for="descripcion">Descripcion</label>
+                </div>
+                <div class="controles">
+                    <input type="text" name="descripcion" id="descripcion" size="40">
+                </div>
+            </div>
+            <div class="linea">
+                <div class="etiqueta">
+                    <label for="precio">Precio</label>
+                </div>
+                <div class="controles">
+                    <input type="text" name="precio" id="precio" size="5">
+                </div>
+            </div>
+            <div class="lnea">
+                <div class="etiqueta">
+                    <label for="mail">Email</label>
+                </div>
+                <div class="controles">
+                    <input type="email" name="mail" id="mail" size="20">
+                </div>
+            </div> 
+        </div>
+        <div class="final"></div>
+            <br>
+        <div class="boton">
+            <input type="submit" value="Enviar" id="enviar">
+        </div>
+    </form>
+</body>
+</html>

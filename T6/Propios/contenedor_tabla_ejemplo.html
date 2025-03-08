@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Estructura y Layout - display table</title>
+    <meta charset="utf-8">
+    <style>
+        #contenedor {
+            width: 90%;
+            margin: 10px auto;
+            font-family: Arial;
+        }
+
+        #cabecera {
+            padding-top: 30px;
+        }
+
+        #cuerpo {
+            display: table;
+            border-spacing: 5px;
+            background: #ccc;
+            border: 1px solid #333;
+            margin-top: 20px;
+        }
+
+        #contenidos {
+            display: table-row;
+            background: #fcfcfc;
+        }
+
+        #secundario {
+            width: 20%;
+            display: table-cell;
+            border: 1px solid #FFF;
+            padding: .5em;
+        }
+
+        #principal {
+            width: 60%;
+            display: table-cell;
+            border: 1px solid #FFF;
+            padding: .5em;
+        }
+
+        #lateral {
+            width: 20%;
+            display: table-cell;
+            border: 1px solid #FFF;
+            padding: .5em;
+        }
+
+        #pie {
+            padding-top: 50px;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0px;
+            padding-left: 5px;
+            min-width: 500px;
+        }
+
+        li {
+            display: inline;
+        }
+
+        #menu a {
+            text-align: center;
+            margin: 1px;
+            padding: 5px;
+            width: 90px;
+            font-weight: bold;
+            background-color: #ccc;
+            text-decoration: none;
+        }
+
+        #menu a:hover {
+            color: white;
+            background-color: #069;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="contenedor">
+        <div id="cabecera">
+            <h1>LOREM IPSUM DOLOR</h1>
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="#">Opción 1</a></li>
+                <li><a href="#">Opción 2</a></li>
+                <li><a href="#">Opción 3</a></li>
+                <li><a href="#">Opción 4</a></li>
+            </ul>
+        </div>
+        <div id="cuerpo">
+            <div id="contenidos">
+                <div id="secundario">
+                    <h3>Curabitur rutrum eros a risus.</h3>
+                    <p>
+                        Cum sociis natoque penatibus et magnis dis parturient montes,
+                        nascetur ridiculus mus. In molestie suscipit libero.
+                    </p>
+                    <p>
+                        Cras sem. Nunc non tellus et urna mattis tempor. Nulla nec tellus a
+                        quam hendrerit venenatis.
+                    </p>
+                    <p>Suspendisse pellentesque odio et est.</p>
+                </div>
+                <div id="principal">
+                    <h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
+                    <p>
+                        Maecenas non tortor. Vestibulum ante ipsum primis in faucibus orci
+                        luctus et ultrices posuere cubilia Curae; Sed fermentum lorem a
+                        velit.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin
+                        sodales, enim in volutpat vehicula, leo turpis vehicula magna, ut
+                        rutrum arcu lorem ac pede.</p>
+                    <p>
+                        Curabitur rutrum eros a risus. Cum sociis natoque penatibus et
+                        magnis dis parturient montes, nascetur ridiculus mus. in molestie
+                        suscipit libero. cras sem. Nunc non tellus et urna mattis tempor.
+                        Nulla nec tellus a quam hendrerit venenatis. Suspendisse
+                        pellentesque odio et est. Morbi sed nisl sed dui consequat sodales.
+                        Donec porta porta ligula. Nam erat massa, blandit in, dapibus sit
+                        amet, vestibulum et, augue. Suspendisse ac risus. Duis semper
+                        fringilla sem. Praesent augue arcu, scelerisque nec, ornare
+                        malesuada, posuere a, neque. Nullam nulla nisi, ultrices quis,
+                        adipiscing non, varius ut, dui. Nulla viverra pellentesque sem.
+                    </p>
+                </div>
+                <div id="lateral">
+                    <p>
+                        Nam erat massa, blandit in, dapibus sit amet, vestibulum et, augue.
+                        Suspendisse ac risus.</p>
+                    <img src="coche.png" alt="Coche">
+                </div>
+            </div>
+        </div>
+        <div id="pie">
+            Mi página Web - 2016
+        </div>
+    </div>
+</body>
+
+</html>\

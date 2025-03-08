@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Display table</title>
+    <style>
+        /*Creamos la tabla*/
+        .tabla {
+            display: table;
+            margin-left: auto ;
+            margin-right: auto;
+            padding: 10px;
+            width: 60%;
+        }
+        .linea {
+            display: table-row;
+            height: 25px;
+        }
+        .etiqueta {
+            display: table-cell;
+            text-align: right;
+            width: 40%;
+            padding-right: 10px;
+        }
+        .controles {
+            display: table-cell;
+            text-align: left;
+            width: 50%;
+        }
+        .boton {
+            text-align: center;
+        }
+        .centrado {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!--Creamos el titulo-->
+    <h1 class="centrado">DATOS DEL PRODUCTO</h1>
+    <!--Creamos primero el formulario y dentro la tabla-->
+    <form action="http://portfolio.karlinux.com" method="post" id="formulario1">
+        <!--Creamos la tabla para poner las lineas y las celdas-->
+        <div class="tabla">
+            <div class="linea">
+                <div class="etiqueta">
+                    <label for="codigo">ID del producto</label>
+                </div>
+                <div class="controles">
+                    <input type="text" id="codigo" name="codigo" size="10">
+                </div>
+            </div>
+            <div class="linea">
+                <div class="etiqueta">
+                    <label for="descripcion">Descripcion</label>
+                </div>
+                <div class="controles">
+                    <input type="text" id="descripcion" name="descripcion" size="40">
+                </div>               
+            </div>
+            <div class="linea">
+                <div class="etiqueta">
+                    <label for="precio">Precio</label>
+                </div>
+                <div class="controles">
+                    <input type="text" id="precio" name="precio" size="5">
+                </div>               
+                    </div>
+        </div>
+    <div class="boton">
+        <input type="submit" name="codigos" value="Enviar">
+    </div>
+    </form>
+</body>
+</html>

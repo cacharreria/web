@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html lang="es-es">
+<head>
+    <title>Ejercicio 6-3a</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            border: 0px;
+            padding: 0px;
+            font-family: Tahoma;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .contenedor {
+            width: 80%;
+            margin-right: auto;
+            margin-left: auto;
+            background-color: aliceblue;
+            border: 1px solid cornflowerblue;
+        }
+
+        .tabla {
+            display: table;
+        }
+
+        .fila {
+            display: table-row;
+            height: 25px;
+        }
+
+        .celda {
+            display: table-cell;
+        }
+
+        .etiqueta {
+            text-align: right;
+            padding-right: 10px;
+            vertical-align: top;
+            width: 60%;
+        }
+
+        .control {
+            text-align: left;
+            width: auto;
+        }
+
+        .botones {
+            text-align: center;
+        }
+
+        .negrita {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>INDUSTRIAS ACME. FORMULARIO DE PEDIDO</h2>
+    <form action="http://servidor5/manejador3.asp" method="post">
+        <div class="contenedor">
+            <div class="tabla">
+                <div class="fila">
+                    <div class="celda etiqueta negrita"><p>Datos del cliente:</p></div>
+                    <div class="celda control"> </div>
+                </div>
+                <div class="fila">
+                    <div class="celda etiqueta"><label for="nom">Nombre</label></div>
+                    <div class="celda control"><input type="text" id="nom" size="50" maxlength="60"></div>
+                </div>
+                <div class="fila">
+                    <div class="celda etiqueta"><label for="email">Correo Electrónico</label></div>
+                    <div class="celda control"><input type="text" id="email" size="40" maxlength="50" autocomplete="off"></div>
+                </div>
+                <div class="fila">
+                    <div class="celda etiqueta">Tipo de cliente</div>
+                    <div class="celda control">
+                        <label for="particular">
+                            <input type="radio" id="particular" name="tipo" checked> Particular <br />
+                        </label>
+                        <label for="asociacion">
+                            <input type="radio" id="asociacion" name="tipo"> Asociación <br />
+                        </label>
+                        <label for="empresa">
+                            <input type="radio" id="empresa" name="tipo"> Empresa
+                        </label>
+                    </div>
+                </div>
+                <div class="fila">
+                    <div class="celda etiqueta negrita negrita"><p> Datos de los productos: </p></div>
+                    <div class="celda control"> </div>
+                </div>
+                <div class="fila">
+                    <div class="celda etiqueta"><label for="producto">Productos solicitados</label></div>
+                    <div class="celda control">
+                        <select id="producto" name="producto" multiple size="5">
+                            <option value="AR001" selected="selected">
+                                AR001 Oro Reluciente
+                            </option>
+                            <option value="AR002">
+                                AR002 Plata Pulida
+                            </option>
+                            <option value="AR003">
+                                AR003 Bronce Reforzado
+                            </option>
+                            <option value="EX001" selected="selected">
+                                EX001 Escudo
+                            </option>
+                            <option value="EX002">
+                                EX002 Invisibilidad
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="fila">
+                    <div class="celda etiqueta negrita"><p>Datos del envío:</p></div>
+                    <div class="celda control"> </div>
+                </div>
+                <div class="fila">
+                    <div class="celda etiqueta"><label for="dire">Dirección</label></div>
+                    <div class="celda control"><input type="text" id="dire" name="dire" size="50" maxlength="80"></div>
+                </div>
+                <div class="fila">
+                    <div class="celda etiqueta"><label for="ciudad">Ciudad</label></div>
+                    <div class="celda control"><input type="text" id="ciudad" name="ciudad" size="30" maxlength="30"></div>
+                </div>
+                <div class="fila">
+                    <div class="celda etiqueta"><label for="cp">Código Postal</label></div>
+                    <div class="celda control"><input type="text" id="cp" name="cp" size="5" maxlength="20"></div>
+                </div>
+                <div class="fila">
+                    <div class="celda etiqueta"><p>Datos bancarios:</p></div>
+                    <div class="celda control"> </div>
+                </div>
+                <div class="fila">
+                    <div class="celda etiqueta"><label for="entidad">Nombre de la entidad</label></div>
+                    <div class="celda control"><input type="text" id="entidad" name="entidad" size="40"></div>
+                </div>
+                <div class="fila">
+                    <div class="celda etiqueta"><label for="cuenta">Número de Cuenta</label></div>
+                    <div class="celda control"><input type="text" id="cuenta" name="cuenta" size="30"></div>
+                </div>
+
+                <div class="fila">
+                    <div class="celda etiqueta negrita"><p>Otra información del pedido:</p></div>
+                    <div class="celda control"> </div>
+                </div>
+                <div class="fila">
+                    <div class="celda etiqueta"><label for="comenta">Comentarios</label></div>
+                    <div class="celda control"><textarea id="comenta" name="comenta" rows="4" cols="45">Escriba aquí sus comentarios...</textarea></div>
+                </div>
+                <div class="fila">
+                    <div class="celda etiqueta"> </div>
+                    <div class="celda control"> </div>
+                </div>
+                <div class="fila">
+                    <div class="celda etiqueta"><label for="publi">Accepto recibir información publicitaria</label></div>
+                    <div class="celda control"><input type="checkbox" id="publi" name="publi" value="si" checked></div>
+                </div>
+                <div class="fila">
+                    <div class="celda etiqueta"> </div>
+                    <div class="celda control"> </div>
+                </div>
+            </div>
+            <div class="botones">
+                <input type="submit" value="Enviar pedido">
+                <input type="reset" value="Cancelar">
+                <br /> <br />
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+
+
+
+

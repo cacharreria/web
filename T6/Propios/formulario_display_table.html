@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Visualizacion(display) table</title>
+        <meta charset="utf-8"/>
+        <style>
+            /* Creamos un contenedor */
+            .contenedor {
+                padding-top: 20px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            /* Tabla */
+            .tabla {
+                display: table;
+                width: 50%;
+                margin-left: auto;
+                margin-right: auto;
+                border: 1px solid black;
+            }
+            .fila {
+                display: table-row;
+            }
+            .encabezado {
+                background: aquamarine;
+            }
+            .celda {
+                display: table-cell;
+                padding: 5px;
+               border: 0.01em  solid black;
+            }
+            .titulo {
+                display: table-caption;
+                text-align: center;
+                padding-bottom: 5px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <!--Creamos el contenedor que lo va a contener todo-->
+        <div class="contenedor">
+            <!--Creamos la tabla-->
+            <div class="tabla">
+                <div class="titulo">CLIENTES</div>
+                <div class="fila encabezado">
+                    <div class="celda">Nombre</div>
+                    <div class="celda">Direccion</div>
+                    <div class="celda">Ciudad</div>
+                    <div class="celda">Telefono</div>
+                </div>
+                <div class="fila">
+                    <div class="celda">Pedro Juan Gomez</div>
+                    <div class="celda">C/ Pedro Herrero 5</div>
+                    <div class="celda">Alicante</div>
+                    <div class="celda">965121495</div>
+                </div>
+
+                <div class="fila">
+                    <div class="celda">Alejandro Perez Gomez</div>
+                    <div class="celda">C/ La luz 8</div>
+                    <div class="celda">Segovia</div>
+                    <div class="celda">677589321</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
