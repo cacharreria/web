@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Etiqueta Canvas</title>
+</head>
+
+<body>
+    <h1>Etiqueta canvas</h1>
+    <canvas id="dibujo" width="300" height="300" style="border: 1px solid black">
+        Su navegador no soporta la etiqueta canvas.
+    </canvas>
+    <script type="text/javascript">
+        var canvas = document.getElementById("dibujo");
+        var contexto = canvas.getContext("2d");
+        contexto.beginPath();
+        contexto.lineWidth = 4;
+        contexto.moveTo(150, 50);
+        contexto.quadraticCurveTo(50, 50, 50, 125);
+        contexto.quadraticCurveTo(50, 200, 100, 200);
+        contexto.quadraticCurveTo(100, 240, 60, 250);
+        contexto.quadraticCurveTo(120, 240, 130, 200);
+        contexto.quadraticCurveTo(250, 200, 250, 125);
+        contexto.quadraticCurveTo(250, 50, 150, 50);
+        contexto.fillStyle = "orange";
+        contexto.fillRect(20, 20, 260, 260);
+        contexto.stroke();
+        contexto.font = "bold 60px 'Segoe UI'";
+        contexto.strokeText("Hola", 85, 140);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="wifth=device-with, initial-scale=1" />
+    <title>Controles de Formulario</title>
+  </head>
+  <body>
+    <form
+      id="formularios"
+      action="https://portfolio.karlinux.com"
+      method="post"
+    >
+      <!-- <datalist> -->
+      <label for="frutas">Escoja una fruta:</label>
+      <input type="text" id="frutas" name="frutas" list="frutillas" />
+      <datalist id="frutillas">
+        <option value="Manzana"></option>
+        <option value="Fresa"></option>
+        <option value="Platano"></option>
+        <option value="Ciruela"></option></datalist
+      ><br />
+      <br />
+      <!-- email -->
+      <label for="email">Correo Electronico:</label>
+      <input type="email" id="email" name="mail" required />
+      <br />
+      <br />
+      <!-- url -->
+      <label for="url">Pagina Web:</label>
+      <input type="url" id="url" name="url" required />
+      <br />
+      <br />
+      <label for="cantidad">Número de productos (grupos de 2):</label>
+      <input
+        type="number"
+        id="cantidad"
+        name="cantidad"
+        min="2"
+        max="10"
+        step="2"
+        value="2"
+      />
+      <br /><br />
+      <label for="check-in"> Fecha de llegada: </label>
+      <input type="date" id="check-in" name="check-in" /> <br />
+      <br /><br />
+      <label for="check-out"> Fecha de partida: </label>
+      <input type="date" id="check-out" name="check-out" /> <br />
+      <br /><br />
+      <label for="horaentrega">Entrega de la pizza a las: </label>
+      <input
+        type="time"
+        id="horaentrega"
+        name="horaentrega"
+        min="10:00"
+        max="23:00"
+        value="14:00"
+      />
+      <br />
+      <br />
+      <br />
+      <input type="submit" value="Enviar" />
+    </form>
+  </body>
+</html>

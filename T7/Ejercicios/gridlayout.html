@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejercicio 7-3</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-areas:
+                'header header'
+                'sidebar main'
+                'footer footer';
+            grid-template-rows: auto 1fr auto;
+            grid-template-columns: 200px 1fr;
+            height: 85vh;
+        }
+        .header {
+            grid-area: header;
+            background-color: #4CAF50;
+            padding: 20px;
+            text-align: center;
+        }
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .main {
+            grid-area: main;
+            background-color: #ffffff;
+            padding: 20px;
+        }
+        .footer {
+            grid-area: footer;
+            background-color: #4CAF50;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Ejercicio 7-3. Grid Layout</h2>
+    <div class="container">
+        <div class="header">Cabecera</div>
+        <div class="sidebar">Barra Lateral</div>
+        <div class="main">Contenido Principal</div>
+        <div class="footer">Pie de Página</div>
+    </div>
+</body>
+</html>

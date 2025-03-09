@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclases</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        ul {
+            width: 100px;
+            text-align: center;
+        }
+
+        ul :first-child {
+            background-color: yellow;
+        }
+
+        ul :nth-child(3) {
+            background-color: blueviolet;
+        }
+
+        .contenido {
+            display: flex;
+            justify-content: center; /*Alinea en mitad horizontalmente */
+            align-items: center;
+            height: 100vh; /*con estas dos alinea verticalmente*/
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Pseudoclases</h1>
+    <p>
+        Vamos a utilizar el first-child y el nth-child(n) para saber la utilizacion de los elementos en una lista
+    </p>
+    <div class="contenido">
+        <ul style="font-size:19px; list-style-type:none; text-align:center">
+            <li>Opcion 1</li>
+            <li>Opcion 2</li>
+            <li>Opcion 3</li>
+            <li>Opcion 4</li>
+        </ul>
+
+
+    </div>
+</body>
+
+</html>

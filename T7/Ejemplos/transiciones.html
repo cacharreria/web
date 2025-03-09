@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS3 - Transiciones 1</title>
+    <style>
+        .acordeonvertical>ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            width: 300px;
+        }
+
+        .acordeonvertical>ul>li {
+            display: block;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            height: 30px;
+            width: 300px;
+            background-color: #f0f0f0;
+            border-radius: 7px;
+            transition: height 0.3s ease-in-out;
+        }
+
+        .acordeonvertical>ul>li>h3 {
+            display: block;
+            margin: 0;
+            padding: 10px;
+            height: 19px;
+            border-top: #f0f0f0 1px solid;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 80%;
+            color: #000;
+            background: rgb(255, 216, 0);
+        }
+
+        .acordeonvertical>ul>li>div {
+            margin: 0;
+            overflow: auto;
+            padding: 10px;
+            height: 150px;
+        }
+
+        .acordeonvertical>ul>li:hover {
+            height: 150px;
+        }
+
+        .acordeonvertical:hover>ul>li:hover>h3 {
+            color: #fff;
+            background: rgb(255, 106, 0);
+            font-size: 80%;
+        }
+
+        .acordeonvertical>ul>li>h3:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Transiciones</h1>
+    <div class="acordeonvertical">
+        <ul>
+            <li>
+                <h3>Opción 1</h3>
+                <div>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed non
+                    risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
+                    nec, ultricies sed, dolor. Cras elementum ultrices diam.
+                </div>
+            </li>
+            <li>
+                <h3>Opción 2</h3>
+                <div>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed non
+                    risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
+                    nec, ultricies sed, dolor. Cras elementum ultrices diam.
+                </div>
+            </li>
+            <li>
+                <h3>Opción 3</h3>
+                <div>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed non
+                    risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
+                    nec, ultricies sed, dolor. Cras elementum ultrices diam.
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
