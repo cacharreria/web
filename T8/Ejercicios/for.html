@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8-6</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+
+        .persona {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Objetos Definidos por el Programador</h1>
+    <div id="contenido"></div>
+
+    <script>
+        // Definición de la lista de objetos personas
+        var personas = [
+            { nombre: "Juan", edad: 30 },
+            { nombre: "María", edad: 25 },
+            { nombre: "Pedro", edad: 35 }
+        ];
+
+        // Usando for
+        let resultado = "<h2>Usando for</h2>";
+        for (let i = 0; i < personas.length; i++) {
+            resultado += `<p>Nombre: ${personas[i].nombre}, Edad: ${personas[i].edad}</p>`;
+        }
+
+        // Usando for-of
+        resultado += "<h2>Usando for-of</h2>";
+        for (const persona of personas) {
+            resultado += `<p>Nombre: ${persona.nombre}, Edad: ${persona.edad}</p>`;
+        }
+
+        // Usando for-off y for-in
+        resultado += "<h2>Usando for-in</h2>";
+        for (const persona of personas) {
+            resultado += "<p>";
+            for (const propiedad in persona) {
+                resultado += ` ${propiedad}: ${persona[propiedad]}`;
+            }
+            resultado += "</p>";
+        }
+        
+        // Mostrar información en la página
+        const contenidoDiv = document.getElementById("contenido");
+        contenidoDiv.class = "persona";
+        contenidoDiv.innerHTML = resultado;
+    </script>
+</body>
+</html>

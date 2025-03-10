@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8-2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input, button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Estrutura de repetición y vectores</h1>
+    <form id="form1" action="#">
+        <label for="txtNumero">Agrega un nuevo número al vector:</label>
+        <input type="number" id="txtNumero" value="0" required>
+        <button type="Button" onclick="agregaElemento()">Introduce elemento</button>
+    </form>
+    <p id="parrafoResultado"></p>
+
+    <script>
+
+        let vector = [3, 12, 45, -34, 78, 23];
+        resultados(vector);
+
+        // Agregar números al vector
+        function agregaElemento() {
+            let numero = parseInt(document.getElementById('txtNumero').value);
+            vector.push(numero);
+            resultados(vector);
+            document.getElementById('txtNumero').value = 0;
+        }
+
+        // Mostrar los resultados
+        function resultados(v) {
+            resultado = "<p>El vector es: " + muestraVector(v) + "</p>";
+            resultado += "<p>La suma de sus elementos es:" + sumaElementos(v) + "</p>";
+            resultado += "<p>El número más alto es: " + maximoVector(v) + "</p>";
+            v = ordenaVector(vector)
+            resultado += "<p>El vector ordenado es: " + muestraVector(v) + "</p>";
+            document.getElementById('parrafoResultado').innerHTML = resultado;
+        }
+
+        function muestraVector(a) {
+            let res = " | ";
+            for (i = 0; i < a.length; i++) {
+                res += i + ": <b>" + a[i] + "</b> | ";
+                
+            }
+            return res.toString();
+        }
+
+        function sumaElementos(vector) {
+            let suma = 0;
+            for (i = 0; i < vector.length; i++) {
+                suma += vector[i];
+            }
+            return suma;
+        }
+
+        function maximoVector(v) {
+            let max = v[0];
+            for (i = 0; i < vector.length; i++) {
+                if (vector[i] > max)
+                    max = vector[i];
+            }
+            return max;
+        } 
+
+        function ordenaVector(vector) {
+            return vector.sort((a, b) => a - b);
+        }
+        
+    </script>
+</body>
+</html>

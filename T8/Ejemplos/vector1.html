@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vectores</title>
+</head>
+
+<body>
+    <h1>ESTRUCTURAS DE REPETICION</h1>
+    <script>
+        //Creaamos un array
+        let frutas = new Array();
+        frutas[0] = "Manzana";
+        frutas[1] = "Fresa";
+        frutas[2] = "Arandanos";
+        // for
+        document.write("Los valores obtenidos mediante <b>for</b> son: ");
+        for (let i = 0; i < frutas.length; i++) {
+            document.write(i + ":" + frutas[i] + " ");
+        }
+        //while
+        document.write("<br> Los valores obtenidos mediante <b>while</b> son: ");
+        i = 0;
+        while (i < frutas.length) {
+            document.write(i + ":" + frutas[i] + " ");
+            i++;
+        }
+        //do
+        document.write("<br> Los valores obtenidos mediante <b>do while</b> son: ");
+        i = 0;
+        do {
+            document.write(i + ":" + frutas[i] + " ");
+            i++;
+        }
+        while (i < frutas.length)
+        //casos
+        document.write("<br> Los valores obtenidos mediante <b>for casos</b> son: ");
+        i = 0;// En las practicas aparece constante en lugar de variable, 
+        //pero bueno con let tambien funciona bien
+        for (let f of frutas) {
+            document.write(i + ":" + f + " ");
+            i++;
+        }
+    </script>
+</body>
+
+</html>

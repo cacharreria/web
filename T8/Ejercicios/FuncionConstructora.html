@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8-5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+
+        .persona {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Objetos Definidos por el Programador</h1>
+    <div id="contenido"></div>
+
+    <script>
+        // Definición del objeto Persona
+        function Persona(nombre, edad) {
+            this.nombre = nombre;
+            this.edad = edad;
+            this.Saludar = function () {
+                return `Hola, mi nombre es ${this.nombre} y tengo ${this.edad} años.`;
+            };
+        }
+
+        // Crear dos instancias del objeto Persona
+        var persona1 = new Persona("Juan", 20);
+        var persona2 = new Persona("María", 21);
+        
+        let resultado = "<p>" + persona1.Saludar() + "</p>";
+        resultado += "<p>" + persona2.Saludar() + "</p>";
+
+        // Mostrar la información en la página
+        const contenidoDiv = document.getElementById("contenido");
+        contenidoDiv.class = "persona";
+        contenidoDiv.innerHTML= resultado;
+    </script>
+</body>
+</html>

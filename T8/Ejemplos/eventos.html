@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <style>
+        .rojo {
+            color: red;
+        }
+
+        .texto {
+            color: #0000ff;
+            background: #ffffcc;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function bienvenida() {
+            alert("Bienvenido al mejor sitio web");
+        }
+        function pulsado() {
+            alert("Has pulsado un elemento web")
+        }
+        function borrar(obj) {
+            obj.innerHTML = "Pulsame, soy interactivo"
+        }
+        function informa(obj) {
+            var cadena = "Si hace click vera elemento vera efectos dinamicos";
+            obj.innerHTML = "Pulsame soy interactivo " + cadena;
+        }
+        function cambiaColor(obj) {
+            if (obj.style.color == "black") {
+                obj.style.color = "yellow";
+            }
+            else {
+                obj.style.color = "black";
+            }
+        }
+        function modifica(obj) {
+            obj.style.color = "red";
+            var obj1 = window.document.getElementById("primerParrafo");
+            obj1.style.color = "blue";
+        }
+        function pulsadoBoton() {
+            var obj1 = window.document.getElementById("paraTexto");
+            obj1.innerHTML += "Has pulsado el boton de comando <br>";
+        }
+    </script>
+</head>
+
+<body onload="bienvenida()"> <!--CArgamos la funcion de bienvenida-->
+    <h1>Eventos. Efectos dinamicos en la presentacion visual</h1>
+    <p id="primerParrafo">Este es el primer parrafo del documento</p>
+    <h3 class="rojo" onclick="pulsado()" onmousemove="informa(this)" onmouseout="borrar(this)">Pulsame, soy interactivo
+    </h3>
+    <h1 onclick="cambiaColor(this)">Pulsame para hacerme cambiar de color</h1>
+    <p onclick="modifica(this)">Este es el último párrafo del documento. Púlsame para ver un efecto
+        visual en el primer párrafo y también en este párrafo</p>
+    <br>
+    <input type="button" value="pulsa" onclick="pulsadoBoton()">
+    <br>
+    <div id="paraTexto" class="texto"></div>
+    <p>>Este ejemplo demuestra el uso de eventos para conseguir efecto visuales</p>
+</body>
+</html>

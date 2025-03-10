@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potencias</title>
+    <script>
+        function negrita(mensaje) {
+            document.write("<p><b>" + mensaje + "</b></p>");
+        }
+        function potencia(a, b) {
+            var total = 1;
+            for (let i = 0; i < b; i++) {
+                total *= a;
+            }
+            return total;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>POTENCIA Y NEGRITA</h1>
+    <script>
+        negrita("Este es un mensaje en negrita");
+        document.write("<br>El resulatdo de la potencia de 2^6 = " + potencia(2, 6) );
+        let a = 2;
+        let b = 3;
+        document.write("<br> La potencia de " + a + "^" + b + "= " + potencia(a, b));
+        //funcion anonima
+        var suma = function (a, b) {
+            return a + b;
+        }
+        document.write("<br> La suma de 4 + 23 = " + suma(4,23))
+        //Funcion flecha
+        var multiplicacion = (a,b) => a*b;
+        document.write("<br> La multiplicacion de 4 * 23 = " + multiplicacion(4,23))
+        //METODOS GLOBALES
+        let verdadero = isNaN("b")
+        document.write("<br> El meoto global isNaN devuelve del valor b (si no es numerico devuelve true) = " + verdadero);
+        //parseFloat(cadena)
+        //parseInt(cadena)
+        //String(valor)
+        //Number(cadena)
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eventos4</title>
+    <style>
+        .contenedor {
+            width: 50%;
+            margin: auto;
+        }
+
+        .errores {
+            font-size: small;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <h1>Eventos 4. Validación de formularios</h1>
+        <p>Este ejemplo demuestra el uso del método addEventListener() para gestionar los
+            eventos para validar un formulario.</p>
+        <p>Introduzca los datos:</p>
+        <form id="form1" action="https://servidor/respuesta" method="post">
+            <div>
+                <p>
+                    <label for="nombre">Nombre:</label>
+                    <br />
+                    <input type="text" id="nombre" name="nombre" size="30">
+                    <br />
+                    <span id="nombreError" class="errores"></span>
+                </p>
+                <p>
+                    <label for="dni">Número DNI:</label>
+                    <br />
+                    <input type="text" id="dni" name="dni" size="20">
+                    <br />
+                    <span id="dniError" class="errores"></span>
+                </p>
+                <p>
+                    <label for="cantidad">Cantidad:</label>
+                    <br />
+                    <input type="text" id="cantidad" name="cantidad" size="10">
+                    <br />
+                    <span id="cantidadError" class="errores"></span>
+                </p>
+                <p>
+                    <input type="submit" value="Enviar Datos">
+                    &nbsp; &nbsp;
+                    <input type="reset" value="Borrar Datos">
+                </p>
+            </div>
+        </form>
+    </div>
+    <script>
+        document.getElementById('form1').addEventListener('submit', function (event) {
+            if (!Validar()) {
+                alert("No se puede enviar el formulario. \n" +
+                    "Por favor, solucione los errores en la información introducida.");
+                event.preventDefault();
+            } else {
+                alert("El formulario va a ser enviado");
+            }
+        });
+
+        function Validar() {
+            let aux = true;
+            // Limpiar observaciones de error
+            document.getElementById('nombreError').textContent = '';
+            document.getElementById('dniError').textContent = '';
+            document.getElementById('cantidadError').textContent = '';
+            // Obtener valores de los campos
+            const nombre = document.getElementById('nombre').value.trim();
+            const dni = document.getElementById('dni').value.trim();
+            const cantidad = document.getElementById('cantidad').value.trim();
+            // Validar Nombre
+            if (nombre === "") {
+                document.getElementById('nombreError').textContent =
+                    'El nombre es un campo requerido.';
+                aux = false;
+            }
+            // Validar DNI
+            if (dni === "") {
+                document.getElementById('dniError').textContent =
+                    'El DNI es un campo requerido.';
+                aux = false;
+            }
+            // Validar Cantidad
+            const carPermitidos = "0123456789";
+            for (let i = 0; i < cantidad.length; i++) {
+                if (!carPermitidos.includes(cantidad[i])) {
+                    document.getElementById('cantidadError').textContent =
+                        'La cantidad debe contener solo números.';
+                    aux = false;
+                    break;
+                }
+            }
+            if (cantidad > 1000) {
+                document.getElementById('cantidadError').textContent =
+                    'La cantidad debe ser un número menor que 1000.';
+                aux = false;
+            }
+            if (cantidad === "") {
+                document.getElementById('cantidadError').textContent =
+                    'La cantidad es un campo requerido.';
+                aux = false;
+            }
+            return aux;
+        }
+    </script>
+</body>
+
+</html>

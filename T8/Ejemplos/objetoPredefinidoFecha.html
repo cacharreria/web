@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos Predefinidos</title>
+</head>
+
+<body>
+    <h1>OBJETOS PREDEFINIDOS</h1>
+    <script>
+        var fecha = new Date();
+        var hora = "Son las " + fecha.toLocaleTimeString();
+        var dia = fecha.getDate();
+        var mes = fecha.getMonth() + 1;
+        var anyo = fecha.getFullYear();
+        var horas = fecha.getHours();
+        var texto1 = "dia " + dia + " de " + mes + " de " + anyo;
+        if (horas <= 12) {
+            document.write("<p>Buenos dias. " + hora + " del " + texto1 + "</p>");
+        }
+        else {
+            if (horas <= 20) {
+                document.write("<p>Buenos Tardes. " + hora + " del " + texto1 + "</p>");
+            }
+            else {
+                document.write("<p>Buenas Noches. " + hora + " del " + texto1 + "</p>");
+            }
+        }
+    </script>
+</body>
+
+</html>

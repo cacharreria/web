@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura de Vectores</title>
+</head>
+
+<body>
+    <h1>ESTRUCTURA DE REPETICION DE VECTORES</h1>
+    <form action="#" id="form">
+        <label for="datos">AGREGA UN NUMERO AL VECTOR: </label>
+        <input type="number" id="txtnumero" required>
+        <button type="button" id="butnumero" onclick="Vectores()">AGREGA NUMERO AL VECTOR</button>
+    </form>
+    <p id="parrafoRes"></p>
+    <script>
+        let v = [12, 34, 56];
+        let resultado = '';
+        function Vectores() {
+            let numero = parseInt(document.getElementById('txtnumero').value);
+            v.push(numero);
+            document.getElementById('txtnumero').value = 0;
+            resultado = res(v);
+            document.getElementById('parrafoRes').innerText = resultado;
+        }
+        function res(vect) {
+            let parrafo = '';
+            let primero = mostrar(vect);
+            let segundo = sumar(vect);
+            let tercero = alto(vect);
+            let cuarto = ordenar(vect);
+            parrafo = "El vector es: " + primero + segundo + tercero + cuarto;
+            return parrafo
+        }
+        function mostrar(vect) {
+            let r = " | ";
+            for (let i = 0; i < vect.length; i++) {
+                r = r + i + ": " + vect[i] + " | ";
+            }
+            return r;
+        }
+        function sumar(vect) {
+            let suma = 0;
+            let res = "";
+            for (let i = 0; i < vect.length; i++) {
+                suma += vect[i];
+            }
+            res = "\n La suma del vector es " + suma;
+            return res;
+        }
+        function alto(vect) {
+            let masalto = vect[0];
+            let res = "";
+            for (let i = 0; i < vect.length; i++) {
+                if (vect[i] > masalto) {
+                    masalto = vect[i];
+                }
+            } res = "\nEl numero mas alto del vector es: " + masalto;
+            return res;
+        }
+        function ordenar(vect){
+            let a = vect.sort((a,b) => a-b);
+            let m = mostrar(a)
+            let t = "\nEl vector ordenado es: " + m;
+            return t;
+        }
+    </script>
+</body>
+
+</html>

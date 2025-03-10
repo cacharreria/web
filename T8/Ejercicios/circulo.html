@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8-3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input, button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cálculo del área y perímetro de circunferencia</h1>
+    <form id="form1" action="#">
+        <label for="txtNumero">Introduce el radio:</label>
+        <input type="number" id="txtNumero" value="0" required>
+        <button type="Button" onclick="calcular()">Calcular</button>
+    </form>
+    <div id="parrafoResultado"></div>
+
+    <script>
+
+        // Función principal
+        function calcular() {
+            let radio = parseFloat(document.getElementById('txtNumero').value);
+
+            let area = calcularAreaCirculo(radio);
+            let perimetro = calcularPerimetroCirculo(radio);
+
+            // alert("El área del círculo es: " + area.toFixed(2));
+            // alert("El perímetro del círculo es: " + perimetro.toFixed(2));
+
+            let resultado = "<p>El radio de la cicunferencia es " + radio.toFixed(2) + "</p>";
+            resultado += "<h3>El cálculo del área es " + area.toFixed(2) + "</h3>";
+            resultado += "<h3>El cálculo del perímetro es " + perimetro.toFixed(2) + "</h3>";
+            document.getElementById('parrafoResultado').innerHTML = resultado;
+        }
+
+        // Función para calcular el área de un círculo
+        function calcularAreaCirculo(radio) {
+            return Math.PI * Math.pow(radio, 2);
+        }
+
+        // Función para calcular el perímetro de un círculo
+        function calcularPerimetroCirculo(radio) {
+            return 2 * Math.PI * radio;
+        }
+
+    </script>
+</body>
+</html>

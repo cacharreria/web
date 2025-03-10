@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8-7</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input, button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Objetos Predefinidos</h1>
+    <form id="form1" action="#">
+        <label for="txtNumero">Introduce una fecha:</label>
+        <input type="date" id="txtFecha" required>
+        <button type="Button" onclick="HastaFinDeAnyo()">Calcular</button>
+    </form>
+    <p id="parrafoResultado"></p>
+
+    <script>
+
+        function HastaFinDeAnyo() {
+            // Obtener la fecha actual
+            const fecha = Date.parse(document.getElementById('txtFecha').value);
+            const fechaActual = new Date(fecha);
+
+            // Obtener el año actual
+            const anyoActual = fechaActual.getFullYear();
+
+            // Crear una fecha para el 31 de diciembre del año actual
+            const finDeAnyo = new Date(anyoActual, 11, 31); // Mes 11 es diciembre (los meses son 0-11)
+
+            // Calcular el número de meses y días restantes
+            const mesesRestantes = finDeAnyo.getMonth() - fechaActual.getMonth();
+            const diasRestantesEnMes = finDeAnyo.getDate() - fechaActual.getDate();
+
+            // Ajustar los meses y días restantes si es necesario
+            let meses = mesesRestantes;
+            let dias = diasRestantesEnMes;
+
+            if (dias < 0) {
+                meses -= 1;
+                const ultimoDiaMesAnterior = new Date(anyoActual, fechaActual.getMonth() + 1, 0).getDate();
+                dias += ultimoDiaMesAnterior;
+            }
+
+            var resultado = `Faltan ${meses} meses y ${dias} días`;
+            resultado += ` hasta el fin de año (${finDeAnyo.toLocaleDateString()})`
+            document.getElementById('parrafoResultado').innerHTML = resultado;
+            console.log(`Faltan ${meses} meses y ${dias} días hasta el fin de año.`);
+        }
+
+    </script>
+</body>
+</html>

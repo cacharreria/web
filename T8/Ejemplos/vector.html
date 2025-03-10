@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Estructuras de repetición</title>
+</head>
+
+<body>
+    <h1>Estructuras de repetición</h1>
+    <script>
+        // Crear un array con algunos elementos
+        let frutas = new Array();
+        frutas[0] = "Manzana";
+        frutas[1] = "Plátano";
+        frutas[2] = "Naranja";
+        // Se muestra el vector frutas usando un bucle for
+        document.write("Los valores obtenidos mediante <b>for</b> son: ");
+        for (let i = 0; i < frutas.length; i++) {
+            document.write(i + ":" + frutas[i] + " ");
+        }
+        // Se muestra el vector frutas usando un bucle while
+        document.write("<br>Los valores obtenidos mediante <b>while</b> son: ");
+        i = 0;
+        while (i < frutas.length) {
+            document.write(i + ":" + frutas[i] + " ");
+            i++;
+        }
+        // Se muestra el vector frutas usando un bucle do-while
+        document.write("<br>Los valores obtenidos mediante <b>do-while</b> son: ");
+        i = 0;
+        do {
+            document.write(i + ":" + frutas[i] + " ");
+            i++;
+        } while (i < frutas.length);
+        // Se muestra el vector frutas usando un bucle for-of
+        document.write("<br>Los valores obtenidos mediante <b>for-of</b> son: ");
+        i = 0;
+        for (const ele of frutas) {
+            document.write(i + ":" + ele + " ");
+            i++;
+        }
+        // Se muestra el vector frutas en la Consola de las Herramientas de desarrollador
+        console.log(frutas);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Funciones</title>
+    <script>
+        // Declaración de funciones
+        function negrita(mensaje) {
+            document.write("<p> <b>" + mensaje + "</b> </p>");
+        }
+        function potencia(x, y) {
+            var total = 1;
+            for (j = 0; j < y; j++) {
+                total *= x;
+            }
+            return total;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Declaración y llamada de funciones</h1>
+    <script>
+        // Llamadas a funciones
+        negrita("Hola, Buenos días");
+        document.write("<br>Resultado: " + potencia(15, 3));
+        let a = 2;
+        let b = 8;
+        document.write("<br>" + a + "^" + b + " = " + potencia(a, b));
+    </script>
+</body>
+
+</html>

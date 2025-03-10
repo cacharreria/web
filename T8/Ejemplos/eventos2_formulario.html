@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos2 DAtos de formulario</title>
+    <style>
+        .errores {
+            font-size: small;
+            color: red;
+        }
+    </style>
+    <script>
+        function Validar() {
+            //Creamos una variable booleana
+            var envio = true;
+            //Limpieza de campos
+            document.getElementById("nombrError").textContent = "";
+            document.getElementById("dniError").textContent = "";
+            document.getElementById("cantidadError").textContent = "";
+            //Obtenemos los valores de los campos
+            const nombre = document.getElementById('nombre').value;
+            const dni = document.getElementById("dni").value;
+            const cantidad = document.getElementById("cantidad").value;
+            //validacion de los datos
+            if (nombre == "") {
+                document.getElementById("nombrError").textContent = "Debe introducir el campo requerido";
+                envio = false;
+            }
+            if (dni == "") {
+                document.getElementById("dniError").textContent = "Debe introducir el campo requerido";
+                envio = false;
+            }
+            //cantidad
+            const numeros = "0123456789"
+            for (var i = 0; i < cantidad.length; i++) {
+                if (!numeros.includes(cantidad[i])) {
+                    document.getElementById("cantidadError").textContent = "La cantidad solo puede tener numeros";
+                    envio = false;
+                    break;
+                }
+            }
+            if (aux && cantidad > 1000) {
+                document.getElementById("cantidadError").textContent = "La cantidad debe ser menor a 1000";
+                envio = false;
+            }
+            if (cantidad == "") {
+                document.getElementById("cantidadError").textContent = "La cantidad es un campo requerido";
+                envio = false;
+            }
+            if (envio == true) {
+                alert("Los datos van a ser enviados");
+            }
+            else {
+                alert("No se envia ningun dato")
+            }
+            return envio;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>EVENTOS DE FORMULARIO</h1>
+    <p>Vamos a validar un formulario</p>
+    <br>
+    <h2>INTRODUZCA LOS DATOS</h2>
+    <form action="http://servidor.com" method="post" id="formulario1" onsubmit="return Validar()">
+        <div>
+            <p>
+                <label for="nombre">Nombre</label>
+                <br>
+                <input type="text" id="nombre" name="nombre" size="30">
+                <br>
+                <span id="nombrError" class="errores"></span>
+            </p>
+            <p>
+                <label for="dni">Dni</label>
+                <br>
+                <input type="text" id="dni" name="dni" size="10">
+                <br>
+                <span id="dniError" class="errores"></span>
+            </p>
+            <p>
+                <label for="cantidad">Cantidad</label>
+                <br>
+                <input type="text" id="cantidad" name="cantidad" size="10">
+                <br>
+                <span id="cantidadError" class="errores"></span>
+            </p>
+            <p>
+                <input type="submit" value="Enviar Datos">
+                <input type="reset" value="Cancelar">
+            </p>
+        </div>
+    </form>
+</body>
+
+</html>

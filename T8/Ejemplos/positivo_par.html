@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positivo y par</title>
+    <style>
+        h1 {
+            text-align: center;
+            color: #0000ff;
+            background: #ffffcc;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Positivo y par</h1>
+    <form action="#" method="post" id="formulario">
+        <label for="numero">Introduce un número:</label>
+        <input type="number" id="txtnumero" name="numero" required>
+        <button type="Button" onclick="Verificar()">Verificar</button>
+    </form>
+        <br>
+    <p id="positivo"></p>
+    <p id="par"></p>
+    <script>
+
+        function Verificar() {
+            const numero = parseInt(document.getElementById('txtnumero').value);
+            let parraf = '';
+            if (numero > 0) {
+                parraf = 'El numero es positivo'
+            }
+            else {
+                if (numero < 0) {
+                    parraf = 'El numero es negativo'
+                }
+                else {
+                    parraf = 'El numero es 0'
+                }
+            }
+            document.getElementById('positivo').innerText = parraf;
+            if (espar(numero)) {
+                parraf = 'El numero es par'
+            }
+            else {
+                parraf = 'El numero es impar'
+            }
+            document.getElementById('par').innerText = parraf;
+        }
+
+        function espar(numero) {
+            return (numero % 2 == 0)
+        }
+
+    </script>
+</body>
+
+</html>

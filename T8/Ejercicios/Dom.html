@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8-8</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+
+        .persona {
+            margin-bottom: 20px;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <h1>Objetos creados por el programador y uso de los objetos DOM dinámicamente</h1>
+    <div id="contenido"></div>
+
+    <script>
+        // Definición del objeto Persona
+        function Persona(nombre, edad) {
+            this.nombre = nombre;
+            this.edad = edad;
+            this.saludar = function () {
+                return `Hola, mi nombre es ${this.nombre} y tengo ${this.edad} años.`;
+            };
+        }
+
+        // Crear instancias del objeto Persona
+        var persona1 = new Persona("Juan", 19);
+        var persona2 = new Persona("María", 21);
+
+        // Mostrar la información en la página
+        const contenidoDiv = document.getElementById("contenido");
+
+        const persona1Div = document.createElement("div");
+        persona1Div.className = "persona";
+        persona1Div.innerHTML = "<p>" + persona1.saludar() + "</p>";
+        //persona1Div.innerHTML = `<p>${persona1.saludar()}</p>`;
+        contenidoDiv.appendChild(persona1Div);
+
+        const persona2Div = document.createElement("div");
+        persona2Div.className = "persona";
+        persona2Div.innerHTML = "<p>" + persona2.saludar() + "</p>";
+        //persona2Div.innerHTML = `<p>${persona2.saludar()}</p>`;
+        contenidoDiv.appendChild(persona2Div);
+    </script>
+
+</body>
+</html>

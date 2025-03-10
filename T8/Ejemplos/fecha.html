@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Objetos Predefinidos</title>
+</head>
+
+<body>
+    <h1>Objetos Predefinidos del lenguaje de script Javascript</h1>
+    <h2> Uso del Objeto Date (Objeto instanciable)</h2>
+    <script>
+        var hoy = new Date();
+        var hora = "Son las " + hoy.toLocaleTimeString();
+        var fecha = "dia " + hoy.getDate() + " de "
+            + hoy.getMonth() + " de " + hoy.getFullYear();
+        if (hoy.getHours() <= 12)
+            document.write("<p> Buenos Dias. " + hora + " del " + fecha + "</p>")
+        else
+            if (hoy.getHours() <= 20)
+                document.write("<p> Buenas Tardes. " + hora + " del " + fecha + "</p>")
+            else
+                document.write("<p> Buenas Noches. " + hora + " del " + fecha + "</p>")
+    </script>
+    <p>Este ejemplo demuestra el uso del Objeto predefnido Date.</p>
+</body>
+
+</html>
